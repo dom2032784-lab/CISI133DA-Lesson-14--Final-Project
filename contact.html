@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Course: CIS133DA
+        Section: 17925
+        Final Project
+        Author: Dominic Romero
+    -->
+    <title>Contact Us | Top Tier Dining Group</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Dominic Romero">
+    <meta name="description" content="Contact Top Tier Dining Group to request a consultation and share your restaurant goals, using the form to provide details about your needs so the team can deliver tailored consulting services and practical solutions for your business.">
+    <meta name="keywords" content="restaurant consultation, contact consulting firm, business inquiry, restaurant help">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Contact Us</h1>
+            <p>Start the conversation about your restaurant goals.</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="existing.html">Existing Owners</a></li>
+                <li><a href="startup.html">Start-Ups</a></li>
+                <li><a class="active" href="contact.html">Contact Us</a></li>
+                <li><a href="policy.html">Policy</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section class="content-box">
+                <h2>Request a Consultation</h2>
+                <p>
+                    If you are ready to take the next step in your restaurant journey, contact Top Tier Dining Group
+                    today. Complete the consultation request form and provide a brief description of your needs.
+                </p>
+                <p>Email: <a href="mailto:consulting@toptierdininggroup.com">consulting@toptierdininggroup.com</a></p>
+                <p>
+                    Helpful industry resource:
+                    <a href="https://www.restaurant.org/">National Restaurant Association</a>
+                </p>
+            </section>
+            <section class="content-box">
+                <h2>Consultation Form</h2>
+                <form onsubmit="submitConsultationForm();">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="service">Brief Description of Services Needed:</label>
+                    <textarea id="service" name="service" rows="6" required></textarea>
+                    <input type="submit" value="Submit Request">
+                    <input type="reset" value="Reset Form" onclick="resetFormMessage();">
+                </form>
+                <p id="formMessage">The form has been reset. Your information was cleared.</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2026 Top Tier Dining Group | Designed by Dominic Romero</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </footer>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
