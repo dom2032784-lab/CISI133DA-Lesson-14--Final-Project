@@ -19,7 +19,7 @@
     <div id="wrapper">
         <header>
             <h1>Contact Us</h1>
-            <p>Start the conversation about your restaurant goals.</p>
+            <p>Start the conversation about your restaurant goals</p>
         </header>
         <nav>
             <ul>
@@ -28,7 +28,7 @@
                 <li><a href="existing.html">Existing Owners</a></li>
                 <li><a href="startup.html">Start-Ups</a></li>
                 <li><a class="active" href="contact.html">Contact Us</a></li>
-                <li><a href="policy.html">Policy</a></li>
+                <li><a href="policypage.html">Policy</a></li>
             </ul>
         </nav>
         <main>
@@ -46,7 +46,7 @@
             </section>
             <section class="content-box">
                 <h2>Consultation Form</h2>
-                <form onsubmit="submitConsultationForm();">
+                <form onsubmit="submitConsultationForm(); return false;">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
                     <label for="email">Email:</label>
@@ -58,7 +58,7 @@
                     <input type="submit" value="Submit Request">
                     <input type="reset" value="Reset Form" onclick="resetFormMessage();">
                 </form>
-                <p id="formMessage">The form has been reset. Your information was cleared.</p>
+                <p id="formMessage" style="display: none;">The form has been reset. Your information was cleared.</p>
             </section>
         </main>
         <footer>
@@ -66,6 +66,6 @@
             <p>Last Modified: <span id="lastModified"></span></p>
         </footer>
     </div>
-    <script src="js/scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>
