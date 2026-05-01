@@ -16,22 +16,23 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <div id="wrapper">
         <header>
             <h1>Contact Us</h1>
             <p>Start the conversation about your restaurant goals</p>
         </header>
-        <nav>
+        <nav aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="existing.html">Existing Owners</a></li>
                 <li><a href="startup.html">Start-Ups</a></li>
-                <li><a class="active" href="contact.html">Contact Us</a></li>
+                <li><a class="active" aria-current="page" href="contact.html">Contact Us</a></li>
                 <li><a href="policypage.html">Policy</a></li>
             </ul>
         </nav>
-        <main>
+        <main id="main" tabindex="-1">
             <section class="content-box">
                 <h2>Request a Consultation</h2>
                 <p>
@@ -46,19 +47,19 @@
             </section>
             <section class="content-box">
                 <h2>Consultation Form</h2>
-                <form onsubmit="submitConsultationForm(); return false;">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                    <label for="service">Brief Description of Services Needed:</label>
-                    <textarea id="service" name="service" rows="6" required></textarea>
+                <form onsubmit="return submitConsultationForm();">
+                    <label for="name">Name:<span class="required">* required</span></label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                    <label for="email">Email:<span class="required">* required</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                    <label for="phone">Phone Number:<span class="required">* required</span></label>
+                    <input type="tel" id="phone" name="phone" required aria-required="true">
+                    <label for="service">Brief Description of Services Needed:<span class="required">* required</span></label>
+                    <textarea id="service" name="service" rows="6" required aria-required="true"></textarea>
                     <input type="submit" value="Submit Request">
                     <input type="reset" value="Reset Form" onclick="resetFormMessage();">
                 </form>
-                <p id="formMessage" style="display: none;">The form has been reset. Your information was cleared.</p>
+                <p id="formMessage" role="status" aria-live="polite" aria-atomic="true">The form has been reset. Your information was cleared.</p>
             </section>
         </main>
         <footer>

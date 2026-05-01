@@ -18,16 +18,17 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <div id="wrapper">
         <header class="banner">
             <h1>About Us</h1>
             <p>Experienced support for restaurant owners and chefs</p>
         </header>
 
-        <nav>
+        <nav aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="about.html">About Us</a></li>
+                <li><a class="active" aria-current="page" href="about.html">About Us</a></li>
                 <li><a href="existing.html">Existing Owners</a></li>
                 <li><a href="startup.html">Start-Ups</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -35,7 +36,7 @@
             </ul>
         </nav>
 
-        <main>
+        <main id="main" tabindex="-1">
             <section class="content-box">
                 <h2>Who We Are</h2>
                 <p>

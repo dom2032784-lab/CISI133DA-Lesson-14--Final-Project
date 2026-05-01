@@ -90,6 +90,41 @@ nav a:hover {
     color: #000000;
 }
 
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 12px;
+    padding: 12px;
+    background-color: #d6a84f;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 999;
+}
+
+button:focus,
+button:focus-visible,
+a:focus,
+a:focus-visible,
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+    outline: 3px solid #d6a84f;
+    outline-offset: 3px;
+}
+
 /*
     Class selector used because the active link changes depending on the page.
 */
@@ -219,11 +254,17 @@ input[type="reset"]:hover {
     ID selector used because this message is controlled by JavaScript
 */
 #formMessage {
-    visibility: hidden;
+    display: none;
     background-color: #000000;
     border-left: 5px solid #d6a84f;
     padding: 10px;
     margin-top: 15px;
+}
+
+.required {
+    color: #ffcc00;
+    font-size: 0.95em;
+    margin-left: 4px;
 }
 
 /* Link styling */
